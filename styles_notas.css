@@ -1,0 +1,236 @@
+/* Reseteo básico de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     /* Aqui estamos aplicando la fuente dad */
+    font-family: 'Arimo', sans-serif;
+}
+
+body
+{
+    /*Lo estamos poniendo en blanco porque viste que usaba blanco hasta el final*/
+    background-color: #fff; 
+}
+
+header
+{
+    background-color: #f3f3f3;
+    /* Estamos poniedo el logo y el menú en línea horizontal */
+    display: flex;
+    /* El logo va a la izquierda y el menú a la derecha */
+    justify-content: space-between;
+    /* Centra verticalmente el contenido */
+    align-items: center;
+    /* Espacio interno alrededor del contenido */
+    padding: 20px;
+}
+#icono {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #6cb500;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 35px;
+  }
+
+/* Estilos para el logo en el encabezado */
+.logo img 
+{
+    /* Ajusta el tamaño del logo */
+    height: 60px; 
+    /* Mantiene las proporciones del logo */
+    width: auto; 
+}
+#caja
+{
+    display: block;
+}
+/* Estilos para el menú de navegación */
+nav ul 
+{
+    /* Coloca los elementos del menú en fila horizontal */
+    display: flex; 
+    /* Elimina los puntos de la lista */
+    list-style: none; 
+}
+
+nav ul li
+{
+    /* Espacio entre los elementos del menú */
+    margin-left: 20px; 
+}
+
+nav ul li a 
+{
+     /* Elimina el subrayado de los enlaces */
+    text-decoration: none;
+     /* Color negro para los enlaces */
+    color: #000;
+    font-weight: 500; /* Grosor de la fuente medio */
+    padding: 10px 20px; /* Añade espaciado interno a los enlaces */
+    transition: background-color 0.3s ease; /* Efecto de transición suave para el cambio de fondo */
+}
+
+/* Estilos al pasar el cursor sobre los enlaces del menú */
+nav ul li a:hover {
+    background-color: #6cb500; /* Fondo verde al pasar el cursor */
+    color: #fff; /* Texto blanco cuando el enlace está activo */
+    border-radius: 5px; /* Bordes redondeados para un efecto suave */
+}
+
+/* Sección del héroe con imagen de fondo */
+.hero 
+{
+     /* Imagen de fondo */
+    background-image: url('imagenes/foto_slide.jpg');
+    /* La imagen cubrirá todo el espacio disponible */
+    background-size: cover; 
+     /* Centra la imagen de fondo */
+    background-position: center;
+    /* Define la altura de la sección como el 70% del viewport */
+    height: 70vh; 
+     /* Permite posicionar elementos relativos dentro de esta sección */
+    position: relative;
+    /* Usa Flexbox para centrar los elementos */
+    display: flex; 
+    /* Esto movera a la izquieda el texto */
+    justify-content: flex-start; 
+    /* Centra el contenido verticalmente */
+    align-items: center; 
+     /* Ira en lineas de izquierda */
+    text-align: start;
+    color: #fff;
+}
+
+/* Estilos para el texto dentro de la sección hero */
+.hero h2 {
+    font-size: 36px; /* Tamaño del texto */
+    font-weight: 500; /* Grosor medio */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Añade sombra al texto para mayor legibilidad */
+    max-width: 80%; /* Limita el ancho del texto para evitar que se extienda demasiado */
+    margin: 0 auto; /* Centra el texto horizontalmente */
+}
+.services {
+    padding: 40px 20px; /* Espaciado alrededor de la sección */
+    background-color: #fff; /* Fondo blanco */
+    text-align: center; /* Centra todo el texto en esta sección */
+}
+/* Estilos generales para la sección de servicios */
+section {
+    padding: 50px 20px; /* Espaciado alrededor de la sección */
+    text-align: center; /* Centra el texto en la sección */
+}
+
+/* Estilos para el encabezado de la sección de servicios */
+.services h2 
+{
+    font-size: 36px; /* Tamaño del título */
+    color: #000;
+    margin-bottom: 10px; /* Espaciado debajo del título */
+}
+
+.services pr {
+    font-size: 18px; /* Tamaño del subtítulo */
+    color: #6cb500; /* Color del subtítulo */
+    margin-bottom: 30px; /* Espaciado debajo del subtítulo */
+    display: block; /* Se asegura de que el subtítulo sea tratado como un bloque */
+}
+
+/* Estilos para el contenedor de servicios que organiza en tres columnas */
+.sev 
+{
+    display: flex; /* Flexbox para organizar en filas y columnas */
+    justify-content: space-between; /* Espacio igual entre las columnas */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos bajen si la pantalla es pequeña */
+    margin-top: 20px; /* Espaciado entre el título y los servicios */
+}
+
+.sev h3 
+{
+    font-size: 36px; /* Tamaño del título */
+    color: #6cb500;
+    margin-bottom: 10px; /* Espaciado debajo del título */
+}
+/* Estilos para cada producto en columnas */
+.productos
+{
+    background-color: #f3f3f3; /* Fondo gris claro para cada tarjeta de producto */
+    padding: 20px; /* Espacio interno dentro de cada columna */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 30%; /* Cada columna ocupará el 30% del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad */
+    text-align: center; /* Centra el contenido de cada columna */
+    margin-bottom: 20px; /* Espaciado inferior para evitar solapamiento en móviles */
+}
+
+/* Estilos para las imágenes dentro de las columnas */
+.productos img
+{
+    max-width: 100px; /* Limita el ancho máximo de las imágenes */
+    height: auto; /* Mantiene las proporciones de las imágenes */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+.pie
+{
+    background-color: #6cb500;
+    text-align: center;
+    padding: 10px;
+}
+/* Estilos responsive para pantallas de hasta 768px */
+/* Estilos responsive para pantallas de hasta 480px */
+@media (max-width: 480px) {
+    header {
+        flex-direction:column;
+        align-items: flex-start;
+    }
+    
+    #icono
+     {
+        display: flex;
+        flex-direction:row;
+        align-items: flex-end;
+      }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 8px; /* Reduce el margen inferior */
+    }
+
+    .hero h2 {
+        font-size: 22px; /* Reduce el tamaño del texto */
+        max-width: 100%; 
+    }
+
+    .sev {
+        flex-direction: column; /* Los servicios se muestran en columna */
+    }
+
+    .productos {
+        width: 100%; /* Cada producto ocupa todo el ancho */
+        margin-bottom: 15px; /* Reduce el margen inferior */
+    }
+
+    .productos img {
+        max-width: 70px; /* Ajusta el tamaño de las imágenes */
+    }
+
+    .services h2 {
+        font-size: 24px; /* Ajusta el tamaño del título */
+    }
+
+    .sev h3 {
+        font-size: 20px; /* Ajusta el tamaño de los subtítulos */
+    }
+}
+
